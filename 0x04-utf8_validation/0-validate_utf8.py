@@ -23,7 +23,8 @@ def validUTF8(data):
         if not is_start_byte(byte):
             return False
 
-        # Determine the number of bytes the character occupies based on the MSB of the start byte
+        # Determine the number of bytes the character occupies
+        # based on the MSB of the start byte
         num_bytes = 1
         if (byte >> 7) == 0b0:
             num_bytes = 1
